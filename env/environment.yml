@@ -1,0 +1,13 @@
+name: genomics-pipeline
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pip
+  - pip:
+      - xgboost
