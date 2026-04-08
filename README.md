@@ -168,21 +168,37 @@ Supervised classification was performed using gene expression features:
 ### 🧠 PCA Analysis
 ![PCA](results/figures/pca_plot.png)
 
-Tumour and normal samples separate distinctly, indicating strong global expression differences.
+Principal Component Analysis reveals a clear separation between tumour and normal samples along PC1 (10.8% variance explained), indicating that tumour-driven transcriptional changes represent a dominant source of variation in the dataset.
+
+Normal samples cluster tightly, reflecting relatively homogeneous gene expression profiles, whereas tumour samples exhibit greater dispersion, suggesting increased transcriptional heterogeneity consistent with tumour evolution and microenvironmental variability.
 
 ---
 
 ### 🔬 Differential Expression
 ![Volcano](results/figures/volcano_plot.png)
 
-Thousands of genes exhibit significant dysregulation, reflecting widespread transcriptional changes in cancer.
+The volcano plot demonstrates widespread transcriptional dysregulation, with approximately 4,400 genes significantly altered between tumour and normal tissue.
+
+Notably:
+
+- Strong downregulation of lung-specific genes (e.g. SFTPC, AGER) reflects loss of normal tissue identity
+Upregulated genes likely correspond to proliferative, metabolic, or oncogenic pathways
+
+- The asymmetry and density of significant points highlight the extensive molecular reprogramming characteristic of LUAD.
 
 ---
 
 ### 🧬 Heatmap (Top 50 Genes)
 ![Heatmap](results/figures/heatmap_top50_genes.png)
 
-Selected genes clearly stratify tumour and normal samples, validating DE results.
+The heatmap of top differentially expressed genes demonstrates clear stratification of tumour and normal samples.
+
+Key observations:
+- Distinct gene expression signatures separate the two groups with minimal overlap
+- Normal samples exhibit consistent expression patterns, while tumour samples show increased variability
+- Clustering structure suggests potential subgroups within tumour samples, indicating underlying biological heterogeneity
+
+This confirms that selected DE genes capture biologically meaningful tumour signatures.
 
 ---
 
@@ -191,8 +207,19 @@ Selected genes clearly stratify tumour and normal samples, validating DE results
 #### Top Mutated Genes
 ![Top Mutations](results/figures/mutation_top_genes.png)
 
+Frequently mutated genes such as TP53, KRAS, and TTN are consistent with known LUAD driver mutations.
+
+- TP53 mutations indicate loss of tumour suppressor function
+- KRAS mutations highlight oncogenic signalling activation
+- High mutation frequency in large genes (e.g. TTN) reflects both biological and technical factors
+
 #### Mutation Burden Distribution
 ![Mutation Burden](results/figures/mutation_burden.png)
+
+Mutation burden varies substantially across samples, indicating strong inter-patient heterogeneity.
+- Most samples exhibit moderate mutation counts
+- A subset of hypermutated samples is observed
+- This variability may reflect differences in genomic instability, environmental exposure, or tumour subtype
 
 ---
 
@@ -206,6 +233,12 @@ Selected genes clearly stratify tumour and normal samples, validating DE results
 
 #### Feature Importance
 ![Feature Importance](results/figures/rf_feature_importance.png)
+
+Both Logistic Regression and Random Forest models achieve near-perfect classification performance (ROC-AUC ≈ 1.0), demonstrating that gene expression profiles provide highly discriminative signals between tumour and normal tissue.
+
+Feature importance analysis highlights biologically relevant genes contributing to classification, including lung-specific markers and tumour-associated genes.
+
+⚠️ However, this performance likely reflects the relative simplicity of tumour vs normal classification and should not be interpreted as generalisable clinical performance without external validation.
 
 ---
 
