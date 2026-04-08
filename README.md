@@ -60,6 +60,21 @@ pip install -r env/requirements.txt
 
 ---
 
+
+## 📦 Data Availability
+
+Due to size constraints, raw datasets are not included in this repository.
+
+Data sources:
+- TCGA LUAD RNA-seq data (UCSC Xena)
+- TCGA clinical metadata
+- Mutation data (LinkedOmics)
+
+Processed datasets can be regenerated using the provided scripts.
+
+---
+
+
 ## 🧬 Data Sources
 
 - TCGA LUAD RNA-seq expression data (UCSC Xena, STAR counts)
