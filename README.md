@@ -1,9 +1,9 @@
-# 🧬 End-to-End Multi-Omics Cancer Genomics Pipeline  
+# End-to-End Multi-Omics Cancer Genomics Pipeline  
 ### TCGA Lung Adenocarcinoma (LUAD)
 
 ---
 
-## 📌 Project Summary
+## Project Summary
 
 This repository implements a reproducible and modular, end-to-end computational pipeline for integrative analysis of TCGA Lung Adenocarcinoma (LUAD) data. The workflow spans transcriptomic profiling, somatic mutation analysis, and supervised machine learning to characterise tumour-specific molecular signatures and build predictive models of cancer state.
 
@@ -11,7 +11,7 @@ The project is designed to reflect real-world bioinformatics and AI-driven biome
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Quantify transcriptomic differences between tumour and normal lung tissue  
 - Identify significantly dysregulated genes using robust statistical methods  
@@ -21,7 +21,7 @@ The project is designed to reflect real-world bioinformatics and AI-driven biome
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 The pipeline follows a modular design, enabling reproducibility and easy extension to additional omics layers.
 
@@ -49,7 +49,7 @@ genomics-cancer-pipeline/
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ```bash
 git clone https://github.com/your-username/genomics-cancer-pipeline.git
@@ -61,7 +61,7 @@ pip install -r env/requirements.txt
 ---
 
 
-## 📦 Data Availability
+## Data Availability
 
 Due to size constraints, raw datasets are not included in this repository.
 
@@ -75,7 +75,7 @@ Processed datasets can be regenerated using the provided scripts.
 ---
 
 
-## 🧬 Data Sources
+## Data Sources
 
 - TCGA LUAD RNA-seq expression data (UCSC Xena, STAR counts)
 - TCGA clinical metadata (sample annotations)
@@ -83,7 +83,7 @@ Processed datasets can be regenerated using the provided scripts.
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### 1. Data Harmonisation and Preprocessing
 
@@ -163,9 +163,9 @@ Supervised classification was performed using gene expression features:
 
 ---
 
-## 📊 Results
+## Results
 
-### 🧠 PCA Analysis
+### PCA Analysis
 ![PCA](results/figures/pca_plot.png)
 
 Principal Component Analysis reveals a clear separation between tumour and normal samples along PC1 (10.8% variance explained), indicating that tumour-driven transcriptional changes represent a dominant source of variation in the dataset.
@@ -174,7 +174,7 @@ Normal samples cluster tightly, reflecting relatively homogeneous gene expressio
 
 ---
 
-### 🔬 Differential Expression
+### Differential Expression
 ![Volcano](results/figures/volcano_plot.png)
 
 The volcano plot demonstrates widespread transcriptional dysregulation, with approximately 4,400 genes significantly altered between tumour and normal tissue.
@@ -188,7 +188,7 @@ Upregulated genes likely correspond to proliferative, metabolic, or oncogenic pa
 
 ---
 
-### 🧬 Heatmap (Top 50 Genes)
+### Heatmap (Top 50 Genes)
 ![Heatmap](results/figures/heatmap_top50_genes.png)
 
 The heatmap of top differentially expressed genes demonstrates clear stratification of tumour and normal samples.
@@ -202,7 +202,7 @@ This confirms that selected DE genes capture biologically meaningful tumour sign
 
 ---
 
-### 🧬 Mutation Landscape
+### Mutation Landscape
 
 #### Top Mutated Genes
 ![Top Mutations](results/figures/mutation_top_genes.png)
@@ -223,7 +223,7 @@ Mutation burden varies substantially across samples, indicating strong inter-pat
 
 ---
 
-### 🤖 Machine Learning Performance
+### Machine Learning Performance
 
 #### ROC Curve
 ![ROC](results/figures/roc_curve.png)
@@ -238,11 +238,11 @@ Both Logistic Regression and Random Forest models achieve near-perfect classific
 
 Feature importance analysis highlights biologically relevant genes contributing to classification, including lung-specific markers and tumour-associated genes.
 
-⚠️ However, this performance likely reflects the relative simplicity of tumour vs normal classification and should not be interpreted as generalisable clinical performance without external validation.
+However, this performance likely reflects the relative simplicity of tumour vs normal classification and should not be interpreted as generalisable clinical performance without external validation.
 
 ---
 
-## 📈 Model Performance
+## Model Performance
 
 | Model | Test Accuracy | ROC-AUC | CV Accuracy |
 |------|-------------|--------|------------|
@@ -253,7 +253,7 @@ High performance reflects strong separability between tumour and normal transcri
 
 ---
 
-## 🔍 Biological Insights
+## Biological Insights
 
 - Tumour samples exhibit large-scale transcriptional reprogramming  
 - Lung-specific genes (e.g. SFTPC, AGER) are downregulated in tumour tissue  
@@ -262,7 +262,7 @@ High performance reflects strong separability between tumour and normal transcri
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - Binary classification (tumour vs normal) is a relatively low-complexity task  
 - Class imbalance (tumour-dominant dataset)  
@@ -271,7 +271,7 @@ High performance reflects strong separability between tumour and normal transcri
 
 ---
 
-## 🚀 Future Directions
+## Future Directions
 
 - Multi-class classification (tumour subtypes)  
 - Integration of mutation + expression features  
@@ -281,7 +281,7 @@ High performance reflects strong separability between tumour and normal transcri
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 ### Languages
 - R
@@ -298,7 +298,7 @@ High performance reflects strong separability between tumour and normal transcri
 
 ---
 
-## 🧠 Key Takeaways
+## Key Takeaways
 
 - Transcriptomic profiles robustly distinguish tumour from normal tissue  
 - Differential expression captures the molecular basis of cancer  
@@ -308,6 +308,6 @@ High performance reflects strong separability between tumour and normal transcri
 
 ---
 
-## 👤 Author
+## Author
 
 **Hasini De Silva**  
